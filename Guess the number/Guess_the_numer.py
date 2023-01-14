@@ -5,8 +5,7 @@ random_number = random.randint(1,100)
 def guess_the_number():
     """User inputs a number until it is the same as randomly generated.
 
-    :rtype: int
-    :return: True if the number is correct
+    :return: information if user guessed a number
     """
 
     correct = False

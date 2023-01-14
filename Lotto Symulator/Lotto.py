@@ -1,6 +1,12 @@
 import random
 
 def lotto():
+    """Application ask user to provide 6 numbers from 1-49.
+    Then randomly draws 6 numbers from that pool.
+    Checks how many user numbers are in random generated list.
+
+    :return: number of correctly chosen numbers by user
+    """
     skreślenia = []
     while len(skreślenia) < 6:
         try:
