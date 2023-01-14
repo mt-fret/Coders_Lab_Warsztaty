@@ -27,5 +27,4 @@ def guess_the_number():
             print("You win!")
             correct = True
 
-
 guess_the_number()
