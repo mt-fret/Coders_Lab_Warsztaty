@@ -1,1 +1,1 @@
-# Coders_Lab_Warsztaty
+Rozwiązania zadań Warsztatów Coders_Lab
