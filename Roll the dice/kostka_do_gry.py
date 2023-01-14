@@ -2,6 +2,11 @@ import random
 
 kostki = ("D100", "D20", "D12", "D10", "D8", "D6", "D4", "D3")
 def roll(y):
+    """Function takes a size of a dice and performs a roll.
+
+    :param y: size of dice
+    :return: result of a dice roll
+    """
     return random.randint(1, y)
 
 def rzut(kod):

@@ -1,4 +1,9 @@
 def zgaduj():
+    """User thinks of a number between 1 and 1000.
+    by providing hints (too small/too big/right) computer tries to guess the number.
+
+    :return: number guesses and total number of tries if number is correct.
+    """
     print("Pomyśl liczbę od 0 do 1000, a ja ją zgadną w max. 10 próbach.")
     min = 0
     max = 1000

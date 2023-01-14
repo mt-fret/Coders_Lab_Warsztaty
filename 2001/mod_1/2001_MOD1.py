@@ -3,6 +3,12 @@ from kostka_do_gry import rzut
 kostki = ("D100", "D20", "D12", "D10", "D8", "D6", "D4", "D3")
 
 def game_roll(roll, score):
+    """
+
+    :param roll: new roll made by user/computer
+    :param score: old score
+    :return: new score
+    """
     if roll == 7:
         score = round(score / roll)
         return score
@@ -14,6 +20,11 @@ def game_roll(roll, score):
         return score
 
 def gra():
+    """Game of 2001.
+    user and computer compete to acquire 2001 points from rolling dice.
+
+    :return: winner, whoever is first to get to 2001 points
+    """
     player_score = 0
     computer_score = 0
     tura = 1

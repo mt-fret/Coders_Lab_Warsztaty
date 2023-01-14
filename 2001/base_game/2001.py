@@ -1,6 +1,11 @@
 import random
 from kostka_do_gry import rzut
 def gra():
+    """Game of 2001.
+    user and computer compete to acquire 2001 points from rolling dice.
+
+    :return: winner, whoever is first to get to 2001 points
+    """
     player_score = 0
     computer_score = 0
     tura = 1

@@ -7,6 +7,11 @@ app = Flask(__name__)
 kostki = ("D100", "D20", "D12", "D10", "D8", "D6", "D4", "D3")
 
 def game_roll(roll, score):
+    """
+        :param roll: new roll made by user/computer
+        :param score: old score
+        :return: new score
+        """
     if roll == 7:
         score = round(score / roll)
         return score
@@ -19,12 +24,23 @@ def game_roll(roll, score):
 
 @app.route('/', methods=['GET', 'POST'])
 def start():
+    """Start of the website. Explains the rules
+
+    :return: index or start of the game
+    """
     if request.method == 'GET':
         return render_template('index.html')
     else: #POST
         return redirect('/gra')
 @app.route('/gra', methods=['GET', 'POST'])
 def gra():
+    """Main function of the app.
+    lets player decide on type of dice they want to use.
+    rolls for computer
+    adds results together
+
+    :return: website presenting results / winners
+    """
     if request.method == 'GET':
         return render_template('gra.html', player_score=0, computer_score=0)
     else: #POST
@@ -49,6 +65,10 @@ def gra():
 
 @app.route('/wygrana', methods=['GET', 'POST'])
 def wygrana():
+    """Presents who won and ask user if they would like to start over.
+
+    :return: website with a game from start
+    """
     if request.method == 'POST':
         return redirect('/gra')
 

@@ -5,6 +5,10 @@ app = Flask(__name__)
 guess_count = 1
 @app.route('/', methods=['GET', 'POST'])
 def zgaduj():
+    """User thinks of a number between 1 and 1000.
+    by providing hints (too small/too big/right) computer tries to guess the number.
+    :return: html code with answers and hints
+    """
     global guess_count
     if request.method == 'GET':
         return render_template('baza.html')
