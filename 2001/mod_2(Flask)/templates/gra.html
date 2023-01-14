@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2001 Game</title>
+</head>
+<body>
+<p style="color:blue">Player's Score: {{ player_score }}</p>
+<p style="color:red">Computer's Score: {{ computer_score }}</p>
+
+  <form method="POST">
+      <label for="dice_type">Choose a dice:</label>
+    <select name="dice_type" id="dice_type">
+      <option value="D3">D3</option>
+      <option value="D4">D4</option>
+      <option value="D6">D6</option>
+      <option value="D8">D8</option>
+      <option value="D10">D10</option>
+      <option value="D12">D12</option>
+      <option value="D20">D20</option>
+      <option value="D100">D100</option>
+</select>
+      <input type="text" name="player_score" value="{{ player_score }}">
+      <input type="text" name="computer_score" value="{{ computer_score }}">
+    <input type="submit" value="Roll!">
+  </form>
+</body>
+</html>

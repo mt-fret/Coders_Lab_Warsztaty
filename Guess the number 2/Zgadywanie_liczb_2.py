@@ -1,0 +1,26 @@
+def zgaduj():
+    print("Pomyśl liczbę od 0 do 1000, a ja ją zgadną w max. 10 próbach.")
+    min = 0
+    max = 1000
+    correct = False
+    guess_count = 0
+    while not correct:
+        guess = int((max-min)/2 + min)
+        print(f"Zgaduję: {guess}")
+        player_input = input("Is this your number?(too big/too small/right)")
+
+        if player_input.lower() == "too big":
+            max = guess
+            guess_count += 1
+            continue
+        elif player_input.lower() == "too small":
+            min = guess
+            guess_count += 1
+            continue
+        elif player_input.lower() == "right":
+            print(f"Wygrałem! W {guess_count} ruchach!")
+            correct = True
+        else:
+            print("Nie oszukuj!")
+
+zgaduj()
