@@ -44,9 +44,11 @@ def gra():
     if request.method == 'GET':
         return render_template('gra.html', player_score=0, computer_score=0)
     else: #POST
-        player_score = int(request.form['player_score'])
-        computer_score = int(request.form['computer_score'])
-
+        try:
+            player_score = int(request.form.get('player_score'))
+            computer_score = int(request.form.get('computer_score'))
+        except TypeError:
+            return render_template('gra.html', player_score=0, computer_score=0)
         dice_type = request.form['dice_type']
         player_roll = rzut(f"2{dice_type}")
         player_score = game_roll(player_roll, player_score)
